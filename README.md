@@ -1,12 +1,11 @@
-# esp32-wifi-can
+# esp32-wifi-twai-can
 # ESP32 无线 slCAN 总线桥接器
 
 ## 📖 概述
 本项目提供了一套基于 **ESP32** 系列的 **WiFi-CAN 透明桥接**固件，支持 LAWICEL/SLCAN 协议。通过 UDP 将 CAN 总线无缝延伸至无线网络，使得上位机（如 Python `python-can`）可以像操作本地 CAN 适配器一样远程操控 CAN 设备。
 
 
-
-> 项目包含两套固件，配合使用：
+> #### 项目包含两套固件，配合使用：
 > 1. **AP 模式**（`esp32_wifi_can_ap/`）：ESP32 作为 WiFi 热点 + CAN 网关，负责实际的 CAN 总线收发
 > 2. **STA 模式**（`esp32_wifi_sta/`）：ESP32 作为 WiFi 客户端，将 USB 串口数据无线桥接至 AP 端
 
@@ -209,6 +208,7 @@ print(recv_msg)
 
 
 ## 📚 参考
+- [LAWICEL protocol](https://www.canusb.com/files/canusb_manual.pdf)
 - [normaldotcom/canable2-fw](https://github.com/normaldotcom/canable2-fw)
 - [python-can](https://github.com/hardbyte/python-can)
 - [Focus-Finder 双目视觉焦点感知测距仪](https://github.com/YeWenxuan64/Focus-Finder)
